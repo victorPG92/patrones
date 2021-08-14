@@ -9,6 +9,9 @@ public abstract class Validador<T>
 	{
 		boolean esValido= esValido(obj);
 		
+		//en cop, se diferencia de otros,
+		//porque en cada elemento se controla si debe seguir o no
+		//puede haber elementos que no se ejecuten
 		if(esValido && sigValidador!=null)
 			esValido= sigValidador.valida(obj);
 		
