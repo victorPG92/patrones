@@ -17,7 +17,7 @@ package patronesnuevo.chainresponsability.segundoejemplo;
 public abstract class FaseProduccion
 {
 
-	private FaseProduccion faseSig;
+	protected FaseProduccion faseSig;
 	
 	public void actuar(MaquinaElectrica maq)
 	{
@@ -48,5 +48,36 @@ public abstract class FaseProduccion
 		else
 			faseSig.insertaValidador(newVal);
 	}
+	
+	
+	public boolean tieneSiguiente()
+	{
+		return faseSig!=null;
+	}
 
+	public FaseProduccion getFaseSig()
+	{
+		return faseSig;
+	}
+
+	/**
+	 * Devuelve si reemplaza
+	 * 
+	 * @param faseSig
+	 * @return
+	 */
+	public boolean setFaseSig(FaseProduccion faseSig)
+	{
+		boolean b= tieneSiguiente();
+		this.faseSig = faseSig;
+		
+		return b;
+	}
+	
+	public void anteponeSiguiente(FaseProduccion faseSigNueva)
+	{
+		FaseProduccion aux= faseSig;
+		faseSig=faseSigNueva;
+		faseSigNueva.faseSig=aux;
+	}
 }
