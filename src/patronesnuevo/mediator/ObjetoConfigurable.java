@@ -1,5 +1,7 @@
 package patronesnuevo.mediator;
 
+
+
 public class ObjetoConfigurable
 {
 
@@ -11,6 +13,16 @@ public class ObjetoConfigurable
 	
 	MaquinaEstados maquinaEstados;
 	
+	public static ObjetoConfigurable creaObjetoConEstado()
+	{
+		ObjetoConfigurable obj= new ObjetoConfigurable();
+		MaquinaEstados maquinaEstados= new MaquinaEstados(obj);
+		//maquinaEstados.setObj(obj);
+		obj.setMaquinaEstados(maquinaEstados);
+		
+		return obj;
+		
+	}
 
 	public void mostrarMensaje()
 	{

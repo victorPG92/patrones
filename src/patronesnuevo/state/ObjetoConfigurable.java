@@ -10,6 +10,17 @@ public class ObjetoConfigurable
 	private Estado estado;// = new Estado1();
 	
 
+	public static ObjetoConfigurable creaObjetoConEstado()
+	{
+		ObjetoConfigurable obj= new ObjetoConfigurable();
+		Estado estadoInicial= new Estado1();
+		estadoInicial.setObj(obj);
+		obj.setEstado(estadoInicial);
+		
+		return obj;
+		
+	}
+	
 	public void mostrarMensaje()
 	{
 		System.out.println(estado.texto);
