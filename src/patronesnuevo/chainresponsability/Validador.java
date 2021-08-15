@@ -1,5 +1,15 @@
 package patronesnuevo.chainresponsability;
 
+/**
+ * Validador de chain of responsability
+ * tiene un validador siguiente
+ * 
+ * el siguiente se ejecuta si el actual, ha dado correcto
+ * 
+ * @author victor
+ *
+ * @param <T>
+ */
 public abstract class Validador<T>
 {
 

@@ -1,7 +1,11 @@
 package patronesnuevo.chainresponsability.segundoejemplo;
 
 import java.util.Iterator;
-
+/**
+ * Clase iterable para las fases
+ * @author victor
+ *
+ */
 public abstract class IterableFase extends FaseProduccion implements Iterable<FaseProduccion>
 {
 	FaseProduccion fase;

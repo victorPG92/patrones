@@ -1,18 +1,25 @@
 package patronesnuevo.chainresponsability.segundoejemplo;
 
+/**
+ * Se ejecuta, siempre, modifica la presion
+ * continua siempre
+ * 
+ * @author victor
+ *
+ */
 public class FasePresion extends FaseProduccion
 {
 
 	@Override
 	protected boolean debeActuar(MaquinaElectrica maq)
 	{
-		return maq.getTemperatura()>100;
+		return true;
 	}
 
 	@Override
 	protected void actua(MaquinaElectrica maq)
 	{
-		 maq.setTemperatura(100);
+		 maq.setPresion((int)(maq.getPresion()*0.9));
 
 	}
 

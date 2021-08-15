@@ -3,6 +3,11 @@ package patronesnuevo.chainresponsability.segundoejemplo;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Crea la chain of responsability concreta
+ * @author victor
+ *
+ */
 public class FactMaquinaFases
 {
 

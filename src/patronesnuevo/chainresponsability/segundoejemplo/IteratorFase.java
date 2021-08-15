@@ -2,6 +2,11 @@ package patronesnuevo.chainresponsability.segundoejemplo;
 
 import java.util.Iterator;
 
+/**
+ * Iterador de una fase
+ * @author victor
+ *
+ */
 public class IteratorFase implements Iterator<FaseProduccion>
 {
 	private FaseProduccion faseActual;	

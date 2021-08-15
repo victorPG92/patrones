@@ -1,5 +1,11 @@
 package patronesnuevo.chainresponsability.segundoejemplo;
 
+/**
+ * Fase que actua unicamente si la temperatura es mayor
+ * de cualquier forma, sigue
+ * @author victor
+ *
+ */
 public class FaseEnfriamiento extends FaseProduccion
 {
 

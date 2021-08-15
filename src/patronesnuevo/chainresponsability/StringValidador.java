@@ -1,5 +1,10 @@
 package patronesnuevo.chainresponsability;
 
+/**
+ * Valida si la cadena es vacia o null
+ * @author victor
+ *
+ */
 public class StringValidador extends Validador<String>
 {
 

@@ -1,5 +1,10 @@
 package patronesnuevo.chainresponsability;
 
+/**
+ * Crea la cadena de validadores
+ * @author victor
+ *
+ */
 public class FactValidador
 {
 

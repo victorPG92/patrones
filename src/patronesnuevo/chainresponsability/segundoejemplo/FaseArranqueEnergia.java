@@ -1,5 +1,13 @@
 package patronesnuevo.chainresponsability.segundoejemplo;
 
+/**
+ * Fasede arranque que necesitra energia
+ * Si tiene suficiente, se ejecuta
+ * si aun tiene suficiente despues de ejecutar, continua
+ * 
+ * @author victor
+ *
+ */
 public class FaseArranqueEnergia extends FaseProduccion
 {
 

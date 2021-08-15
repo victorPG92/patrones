@@ -1,7 +1,7 @@
 package patronesnuevo.chainresponsability.segundoejemplo;
 
 /**
- * En la cor 
+ * En la cor , chain of responsability
  * en cada fase se decide si:
  * debe actuar
  * si debe continuar

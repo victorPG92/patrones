@@ -1,5 +1,12 @@
 package patronesnuevo.chainresponsability.segundoejemplo;
 
+/**
+ * Maquina que se somete a unas fases
+ * y posee temperatura, presion y energia
+ * que seran modificadas y consultadas en las diferentes fases
+ * @author victor
+ *
+ */
 public class MaquinaElectrica
 {
 
