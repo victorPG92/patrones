@@ -1,7 +1,7 @@
-package patronesnuevo.factories.abstractfactory.simple;
+package patronesnuevo.creacionales.factories.abstractfactory;
 
-import patronesnuevo.factories.A;
-import patronesnuevo.factories.B;
+import patronesnuevo.creacionales.factories.A;
+import patronesnuevo.creacionales.factories.B;
 
 public class Cliente
 {

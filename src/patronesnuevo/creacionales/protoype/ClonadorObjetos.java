@@ -1,4 +1,4 @@
-package patronesnuevo.protoype;
+package patronesnuevo.creacionales.protoype;
 
 public class ClonadorObjetos
 {

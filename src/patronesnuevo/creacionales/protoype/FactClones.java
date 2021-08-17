@@ -1,4 +1,4 @@
-package patronesnuevo.protoype;
+package patronesnuevo.creacionales.protoype;
 
 import java.util.HashMap;
 import java.util.Map;

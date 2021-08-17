@@ -1,8 +1,8 @@
-package patronesnuevo.factories.simple;
+package patronesnuevo.creacionales.factories.simple;
 
-import patronesnuevo.factories.A;
-import patronesnuevo.factories.AImpl;
-import patronesnuevo.factories.AImpl2;
+import patronesnuevo.creacionales.factories.A;
+import patronesnuevo.creacionales.factories.AImpl;
+import patronesnuevo.creacionales.factories.AImpl2;
 
 /**
  * En este caso solicito, un objeto tipo A, y le digo el tipo que quiero

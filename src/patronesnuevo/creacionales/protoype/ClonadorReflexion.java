@@ -1,4 +1,4 @@
-package patronesnuevo.protoype;
+package patronesnuevo.creacionales.protoype;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
