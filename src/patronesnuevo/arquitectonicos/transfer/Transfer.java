@@ -1,4 +1,4 @@
-package patronesnuevo.otros.transfer;
+package patronesnuevo.arquitectonicos.transfer;
 
 public class Transfer
 {

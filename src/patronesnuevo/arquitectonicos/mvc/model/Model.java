@@ -1,4 +1,4 @@
-package patronesnuevo.otros.mvc.model;
+package patronesnuevo.arquitectonicos.mvc.model;
 
 public interface Model
 {

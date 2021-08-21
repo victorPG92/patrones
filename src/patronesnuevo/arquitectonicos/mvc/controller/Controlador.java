@@ -1,4 +1,4 @@
-package patronesnuevo.otros.mvc.controller;
+package patronesnuevo.arquitectonicos.mvc.controller;
 
 public abstract class Controlador
 {

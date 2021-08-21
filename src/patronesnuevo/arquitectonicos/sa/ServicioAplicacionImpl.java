@@ -1,7 +1,7 @@
-package patronesnuevo.otros.sa;
+package patronesnuevo.arquitectonicos.sa;
 
-import patronesnuevo.otros.dao.DAO;
-import patronesnuevo.otros.transfer.Transfer;
+import patronesnuevo.arquitectonicos.dao.DAO;
+import patronesnuevo.arquitectonicos.transfer.Transfer;
 
 public class ServicioAplicacionImpl implements ServicioAplicacion
 {

@@ -1,6 +1,6 @@
-package patronesnuevo.otros.mvc.vistas;
+package patronesnuevo.arquitectonicos.mvc.vistas;
 
-import patronesnuevo.otros.mvc.controller.Controlador;
+import patronesnuevo.arquitectonicos.mvc.controller.Controlador;
 
 public class GUIImpl implements View
 {

@@ -1,4 +1,4 @@
-package patronesnuevo.otros.mvc.vistas;
+package patronesnuevo.arquitectonicos.mvc.vistas;
 
 public interface View
 {

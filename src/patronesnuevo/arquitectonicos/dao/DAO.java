@@ -1,6 +1,6 @@
-package patronesnuevo.otros.dao;
+package patronesnuevo.arquitectonicos.dao;
 
-import patronesnuevo.otros.transfer.Transfer;
+import patronesnuevo.arquitectonicos.transfer.Transfer;
 
 public interface DAO
 {

@@ -1,6 +1,6 @@
-package patronesnuevo.otros.mvc.controller;
+package patronesnuevo.arquitectonicos.mvc.controller;
 
-import patronesnuevo.otros.mvc.vistas.View;
+import patronesnuevo.arquitectonicos.mvc.vistas.View;
 
 public class ControllerImpl extends Controlador
 {
