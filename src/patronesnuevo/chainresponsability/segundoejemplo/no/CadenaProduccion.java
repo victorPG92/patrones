@@ -3,7 +3,7 @@ package patronesnuevo.chainresponsability.segundoejemplo.no;
 import java.util.LinkedList;
 import java.util.List;
 
-import patronesnuevo.chainresponsability.segundoejemplo.FaseProduccion;
+import patronesnuevo.comportamiento.chainresponsability.segundoejemplo.FaseProduccion;
 
 /**
  * No es una cadena de responsabilidad, porque no  usa refl, recursion
