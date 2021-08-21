@@ -7,9 +7,9 @@ public class DispatcherImpl implements Dispatcher
 {
 
 	@Override
-	public void despachador(Evento evento, Resultado rtdo)
+	public Resultado despachador(Evento evento, Resultado rtdo)
 	{
-		
+		return rtdo;
 	}
 
 }
