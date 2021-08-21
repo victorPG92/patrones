@@ -1,4 +1,4 @@
-package patronesnuevo.chainresponsability.segundoejemplo.no;
+package patronesnuevo.comportamiento.chainresponsability.segundoejemplo.no;
 
 import java.util.LinkedList;
 import java.util.List;

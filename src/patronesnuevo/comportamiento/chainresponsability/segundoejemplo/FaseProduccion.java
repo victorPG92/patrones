@@ -41,12 +41,12 @@ public abstract class FaseProduccion
 
 	protected abstract boolean debeSeguir(MaquinaElectrica maq);
 
-	public void insertaValidador(FaseProduccion newVal)
+	public void insertaFase(FaseProduccion newVal)
 	{
 		if(faseSig==null)
 			faseSig=newVal;
 		else
-			faseSig.insertaValidador(newVal);
+			faseSig.insertaFase(newVal);
 	}
 	
 	

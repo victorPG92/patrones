@@ -14,8 +14,8 @@ public class FactMaquinaFases
 	public static FaseProduccion getFases()
 	{
 		FaseProduccion fase= new FaseArranqueEnergia();
-		fase.insertaValidador(new FaseEnfriamiento());
-		fase.insertaValidador(new FasePresion());
+		fase.insertaFase(new FaseEnfriamiento());
+		fase.insertaFase(new FasePresion());
 		
 		return fase;
 		
@@ -33,8 +33,8 @@ public class FactMaquinaFases
 		FaseEnfriamiento faseEnf = new FaseEnfriamiento();
 		FasePresion fasePres = new FasePresion();
 		
-		fase.insertaValidador(faseEnf);
-		fase.insertaValidador(fasePres);
+		fase.insertaFase(faseEnf);
+		fase.insertaFase(fasePres);
 		
 		lista.add(fase);
 		lista.add(faseEnf);
