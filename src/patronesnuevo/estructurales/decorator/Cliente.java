@@ -7,7 +7,9 @@ public class Cliente
 	{
 		
 		InterfazBase base= new HijaBase();
-		InterfazBase decorada= new Decor
+		InterfazBase decorada= new DecoradorImpl(base);
+		
+		decorada.f();
 		
 	}
 }
