@@ -3,6 +3,8 @@ package patronesnuevo.estructurales.proxy.cache;
 public class ObjetoConsultaImpl implements ObjetoConsulta
 {
 	Conexion conexion;
+	
+	protected ObjetoConsultaImpl() {}
 
 	@Override
 	public void conecta()

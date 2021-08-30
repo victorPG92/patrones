@@ -10,6 +10,13 @@ public class ProxyCacheConsulta implements ObjetoConsulta
 	Map<String, String> resultados= new HashMap<>();
 	
 	
+	
+	public ProxyCacheConsulta(ObjetoConsulta obj)
+	{
+		super();
+		this.obj = obj;
+	}
+
 	@Override
 	public void conecta()
 	{
