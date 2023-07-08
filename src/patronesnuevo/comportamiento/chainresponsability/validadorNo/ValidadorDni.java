@@ -1,4 +1,4 @@
-package patronesnuevo.comportamiento.chainresponsability;
+package patronesnuevo.comportamiento.chainresponsability.validadorNo;
 
 public class ValidadorDni extends Validador<Persona>
 {

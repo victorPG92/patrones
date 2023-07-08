@@ -1,4 +1,4 @@
-package patronesnuevo.comportamiento.chainresponsability;
+package patronesnuevo.comportamiento.chainresponsability.validadorNo;
 
 /**
  * Valida si la cadena es vacia o null

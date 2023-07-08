@@ -1,0 +1,3 @@
+en realidad el validador, es un decorator
+puesto que va montando la cadena, pero se van add
+funcionalidades a la base
