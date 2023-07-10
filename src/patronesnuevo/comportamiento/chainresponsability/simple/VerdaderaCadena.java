@@ -1,14 +1,14 @@
 package patronesnuevo.comportamiento.chainresponsability.simple;
 
-public abstract class VerdaderaCadena
+public abstract class VerdaderaCadena<T>
 {
 
-	private  VerdaderaCadena sig;
+	private  VerdaderaCadena<T> sig;
 	
-	public abstract boolean debePasarAlSiguiente();
+	protected abstract boolean debePasarAlSiguiente();
 	
 	
-	public void actuar(SolicitudCop solicitud)
+	public void actuar(T solicitud)
 	{
 		if(debePasarAlSiguiente() && sig!=null )
 		{
@@ -19,7 +19,7 @@ public abstract class VerdaderaCadena
 	}
 	
 	
-	public abstract void acabaAccion(SolicitudCop solicitud);
+	protected abstract void acabaAccion(T solicitud);
 	
 	
 }

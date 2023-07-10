@@ -1,6 +1,6 @@
 package patronesnuevo.comportamiento.chainresponsability.simple;
 
-public class SolicitudCop
+public class SolicitudCoR
 {
 
 }
