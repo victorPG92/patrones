@@ -5,8 +5,8 @@ import java.util.Date;
 
 import org.json.JSONObject;
 
-import generadorDtos.dtos.DTO;
-import generadorDtos.generadores.GeneradorRellenadorDTOReflexion;
+import generadorDtos.dtos.Padre;
+import generadorDtos.generadores.GeneradorRellenadorReflexion2;
 import generadorDtos.generadores.rellenadores.RellenadorFromJSON;
 
 public class PruebaJSON
@@ -36,13 +36,17 @@ public class PruebaJSON
 		dto.accumulate("date", new Date());
 		
 		RellenadorFromJSON r= new RellenadorFromJSON(dto);
-		GeneradorRellenadorDTOReflexion g= new GeneradorRellenadorDTOReflexion(r);
+		GeneradorRellenadorReflexion2 g= new GeneradorRellenadorReflexion2(r);
 		
 		try
 		{
-			DTO dtoGenerado=g.generaRellenador(DTO.class);
+			//DTO dtoGenerado=g.generaRellenador(DTO.class);
 			
-			System.out.println(dtoGenerado);
+			Padre padreGenerado= g.generaRellenador(Padre.class);
+			
+			//System.out.println(dtoGenerado);
+			System.out.println(padreGenerado);
+
 		} catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException
 				| SecurityException e)
 		{

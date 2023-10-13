@@ -17,6 +17,13 @@ public class GeneradorRellenadorDTOReflexion {
 	
 	
 	
+	public GeneradorRellenadorDTOReflexion()
+	{
+		super();
+	}
+
+
+
 	public GeneradorRellenadorDTOReflexion(IRellenador rellenador)
 	{
 		super();

@@ -11,6 +11,12 @@ public class Padre {
 	public void setDto(DTO dto) {
 		this.dto = dto;
 	}
+
+	@Override
+	public String toString()
+	{
+		return "Padre [dto=" + dto + "]";
+	}
 	
 	
 }

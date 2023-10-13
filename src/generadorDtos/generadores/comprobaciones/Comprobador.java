@@ -2,6 +2,7 @@ package generadorDtos.generadores.comprobaciones;
 
 import java.lang.reflect.Field;
 import java.sql.Timestamp;
+import java.util.Collection;
 import java.util.Date;
 
 public class Comprobador {
@@ -21,5 +22,17 @@ public class Comprobador {
 				;
 		
 	}
+	
+	
+	public boolean esColeccion(Field field)
+	{
+		Class<?> type = field.getType();
+		return Collection.class.equals(type)
+				|| java.util.List.class.equals(type)
+				||java.util.Set.class.equals(type)
+				
+				;
+	}
+	
 	
 }

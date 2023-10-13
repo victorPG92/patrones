@@ -21,6 +21,13 @@ public class GeneradorRellenadorCodigoDTO {
 	
 	
 	
+	public GeneradorRellenadorCodigoDTO()
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public GeneradorRellenadorCodigoDTO(IRellenador rellenador)
 	{
 		super();
