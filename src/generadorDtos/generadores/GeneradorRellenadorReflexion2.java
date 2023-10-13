@@ -39,6 +39,11 @@ public class GeneradorRellenadorReflexion2 {
 
 	public <T> T generaRellenador(Class<T> clase) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, SecurityException
 	{
+		return generaRellenador(clase, true);
+	}
+		
+	public <T> T generaRellenador(Class<T> clase,boolean obtenerOrigenDto) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, SecurityException
+	{
 		
 		System.out.println("INICIO 2 ");
 
@@ -99,9 +104,15 @@ public class GeneradorRellenadorReflexion2 {
 				System.err.println("No es ni tipo primitivo ni coleccion"+field.getType());
 				//System.exit(-1);
 				try {
-					rellenador.setOrigen(rellenador.getOrigen(field));
-
-					valorASignado=generaRellenador(field.getType());
+					
+					Object origenOld= rellenador.getOrigen();
+					if(obtenerOrigenDto)
+					{
+						rellenador.setOrigen(rellenador.getOrigen(field));	
+					}
+					valorASignado=generaRellenador(field.getType(),false);
+					
+					rellenador.setOrigen(origenOld);
 				} catch (InstantiationException | IllegalAccessException | InvocationTargetException
 						| NoSuchMethodException | SecurityException e) {
 					// TODO Auto-generated catch block

@@ -85,6 +85,11 @@ public class PruebaJSONLista2Elem
 			
 			//System.out.println(dtoGenerado);
 			System.out.println(listadoGenerado);
+			
+			System.out.println(listadoGenerado.getPadres().get(0));
+			System.out.println(listadoGenerado.getPadres().get(1));
+			
+			
 
 		} catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException
 				| SecurityException e)

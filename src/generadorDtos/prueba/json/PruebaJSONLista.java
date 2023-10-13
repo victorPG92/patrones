@@ -62,6 +62,10 @@ public class PruebaJSONLista
 			
 			//System.out.println(dtoGenerado);
 			System.out.println(listadoGenerado);
+			
+			
+			
+
 
 		} catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException
 				| SecurityException e)
