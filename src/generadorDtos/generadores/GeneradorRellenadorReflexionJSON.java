@@ -15,7 +15,7 @@ import generadorDtos.generadores.rellenadores.IRellenador;
 import generadorDtos.generadores.rellenadores.Rellenador;
 
 
-public class GeneradorRellenadorReflexion2 {
+public class GeneradorRellenadorReflexionJSON {
 
 	Comprobador comprobador = new Comprobador();
 	IRellenador rellenador= new Rellenador();
@@ -23,14 +23,14 @@ public class GeneradorRellenadorReflexion2 {
 	
 	
 	
-	public GeneradorRellenadorReflexion2()
+	public GeneradorRellenadorReflexionJSON()
 	{
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 
-	public GeneradorRellenadorReflexion2(IRellenador rellenador)
+	public GeneradorRellenadorReflexionJSON(IRellenador rellenador)
 	{
 		super();
 		this.rellenador = rellenador;
@@ -96,7 +96,6 @@ public class GeneradorRellenadorReflexion2 {
 				//System.exit(-1);
 				try {
 					rellenador.setOrigen(rellenador.getOrigen(field));
-
 					valorASignado=generaRellenador(field.getType());
 				} catch (InstantiationException | IllegalAccessException | InvocationTargetException
 						| NoSuchMethodException | SecurityException e) {

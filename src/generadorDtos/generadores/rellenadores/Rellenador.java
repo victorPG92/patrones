@@ -47,4 +47,17 @@ public class Rellenador implements IRellenador {
 		else
 			return obj.toString();
 	}
+
+	@Override
+	public void setOrigen(Object origen)
+	{
+		
+	}
+
+	@Override
+	public Object getOrigen(Field field)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

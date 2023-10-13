@@ -5,7 +5,7 @@ import java.util.Date;
 
 import org.json.JSONObject;
 
-public class RellenadorFromJSON implements IRellenador
+public class RellenadorFromJSON implements IRellenador<JSONObject>
 {
 	JSONObject json;
 	
@@ -62,5 +62,38 @@ public class RellenadorFromJSON implements IRellenador
 		else
 			return obj.toString();
 	}
+
+	@Override
+	public void setOrigen(JSONObject origen)
+	{
+		setJson(origen);
+		
+	}
+
+	public JSONObject getJson()
+	{
+		return json;
+	}
+
+	public void setJson(JSONObject json)
+	{
+		this.json = json;
+	}
+
+	@Override
+	public JSONObject getOrigen(Field field)
+	{
+		String fieldName= field.getName();
+		System.out.println("cogiend campo "+fieldName);
+
+		JSONObject ret = json.getJSONObject(fieldName);
+		
+		System.out.println("cogiend campo "+fieldName+" ret "+ret);
+
+		
+		return ret;
+	}
+	
+	
 
 }
