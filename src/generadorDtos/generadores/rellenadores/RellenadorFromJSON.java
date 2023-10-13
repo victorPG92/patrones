@@ -120,11 +120,11 @@ public class RellenadorFromJSON implements IRellenador<JSONObject>
 		
 		for (int i = 0; i < ret.length(); i++)
 		{
-			System.out.println(ret.get(0));
-			System.out.println(ret.get(0).getClass());
+			System.out.println(ret.get(i));
+			System.out.println(ret.get(i).getClass());
 			
 			
-			lista.add(ret.getJSONObject(0));
+			lista.add(ret.getJSONObject(i));
 		}
 		
 		

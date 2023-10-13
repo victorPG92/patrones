@@ -150,12 +150,14 @@ public class GeneradorRellenadorReflexion2 {
 		
 		try {
 			
-			System.out.println("origenListado "+ origenListado);
+			System.out.println("rellenaLista origenListado "+ origenListado);
 			for(Object origen: origenListado)
 			{
+				
+				System.out.println("rellenaLista origenListado for"+ origenListado);
 				//if(subnivelListas)			origen= 
 				rellenador.setOrigen(origen);
-				System.out.println("bucle origen"+origen);
+				System.out.println("rellenaLista bucle origen"+origen);
 				T elemLista = generaRellenador((Class<T>)types[0],true);///////////////////////////////////////////////////////////
 				l.add(elemLista);
 			}
