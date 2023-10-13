@@ -3,28 +3,43 @@ package generadorDtos.generadores.rellenadores;
 import java.lang.reflect.Field;
 import java.util.Date;
 
-public class Rellenador implements IRellenador {
+import org.json.JSONObject;
 
-	@Override
+public class RellenadorFromJSON implements IRellenador
+{
+	JSONObject json;
+	
+	
+	
+
+	public RellenadorFromJSON(JSONObject json)
+	{
+		super();
+		this.json = json;
+	}
+
 	public Object rellenaTipoPrimitivo(Field field)
 	{
 		
 		Class<?> type = field.getType();
+		String fieldName= field.getName();
+		
+		
 		//System.out.println("//type "+ type +" en "+  field);
 		if( String.class.equals(type))
-			return "hola";
+			return json.optString(fieldName);
 		else if(Integer.class.equals(type) || int.class.equals(type))
-			return 1;
+			return json.optInt(fieldName);
 		else if(Double.class.equals(type) || double.class.equals(type))
-			return 2.0;
+			return json.optDouble(fieldName);
 		else if(Float.class.equals(type) || float.class.equals(type))
-			return 3f;
+			return json.optFloat(fieldName);
 		else if(Long.class.equals(type) || long.class.equals(type))
-			return 4l;
+			return json.optLong(fieldName);
 		else if(Boolean.class.equals(type) || boolean.class.equals(type))
-			return true;
+			return json.optBoolean(fieldName);
 		else if(Date.class.equals(type))
-			return new Date();
+			return null;
 		else
 			return null;
 	}
@@ -47,4 +62,5 @@ public class Rellenador implements IRellenador {
 		else
 			return obj.toString();
 	}
+
 }

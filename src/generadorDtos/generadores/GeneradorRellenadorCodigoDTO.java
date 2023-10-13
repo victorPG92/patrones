@@ -7,16 +7,25 @@ import java.util.Objects;
 import java.util.Set;
 
 import generadorDtos.generadores.comprobaciones.Comprobador;
+import generadorDtos.generadores.rellenadores.IRellenador;
 import generadorDtos.generadores.rellenadores.Rellenador;
 import generadorDtos.utils.Escritor;
 import generadorDtos.utils.EscritorConsola;
 import generadorDtos.utils.UtilsStringFormat;
 import generadorDtos.utils.UtilsStringJava;
 
-public class GeneradorRellenadorDTO {
+public class GeneradorRellenadorCodigoDTO {
 
 	Comprobador comprobador = new Comprobador();
-	Rellenador rellenador =new Rellenador();   
+	IRellenador rellenador =new Rellenador(); 
+	
+	
+	
+	public GeneradorRellenadorCodigoDTO(IRellenador rellenador)
+	{
+		super();
+		this.rellenador = rellenador;
+	}
 	Set<Class> pendientes= new HashSet<>();
 	public <T> void generaRellenador(Class<T> clase) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, SecurityException
 	{
@@ -74,6 +83,24 @@ public class GeneradorRellenadorDTO {
 			generaRellenador(class1);
 		}
 		
+	}
+	
+	
+	public Comprobador getComprobador()
+	{
+		return comprobador;
+	}
+	public void setComprobador(Comprobador comprobador)
+	{
+		this.comprobador = comprobador;
+	}
+	public IRellenador getRellenador()
+	{
+		return rellenador;
+	}
+	public void setRellenador(IRellenador rellenador)
+	{
+		this.rellenador = rellenador;
 	}
 	
 	

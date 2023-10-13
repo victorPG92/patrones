@@ -7,13 +7,24 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 import generadorDtos.generadores.comprobaciones.Comprobador;
+import generadorDtos.generadores.rellenadores.IRellenador;
 import generadorDtos.generadores.rellenadores.Rellenador;
 
-public class GeneradorRellenadroDTO {
+public class GeneradorRellenadorDTOReflexion {
 
 	Comprobador comprobador = new Comprobador();
-	Rellenador rellenador= new Rellenador();
+	IRellenador rellenador= new Rellenador();
 	
+	
+	
+	public GeneradorRellenadorDTOReflexion(IRellenador rellenador)
+	{
+		super();
+		this.rellenador = rellenador;
+	}
+
+
+
 	public <T> T generaRellenador(Class<T> clase) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, SecurityException
 	{
 		T obj = clase.newInstance();
@@ -49,6 +60,34 @@ public class GeneradorRellenadroDTO {
 		}
 		
 		return obj;
+	}
+
+
+
+	public Comprobador getComprobador()
+	{
+		return comprobador;
+	}
+
+
+
+	public void setComprobador(Comprobador comprobador)
+	{
+		this.comprobador = comprobador;
+	}
+
+
+
+	public IRellenador getRellenador()
+	{
+		return rellenador;
+	}
+
+
+
+	public void setRellenador(IRellenador rellenador)
+	{
+		this.rellenador = rellenador;
 	}
 	
 	

@@ -3,13 +3,13 @@ package generadorDtos.prueba;
 import java.lang.reflect.InvocationTargetException;
 
 import generadorDtos.dtos.DTO;
-import generadorDtos.generadores.GeneradorRellenadroDTO;
+import generadorDtos.generadores.GeneradorRellenadorDTOReflexion;
 
 public class PruebaRellenador {
 
 	
 	public static void main(String[] args) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, SecurityException {
-		GeneradorRellenadroDTO g = new GeneradorRellenadroDTO();
+		GeneradorRellenadorDTOReflexion g = new GeneradorRellenadorDTOReflexion();
 		DTO obj = g.generaRellenador(DTO.class);
 		System.out.println(obj);
 	}
