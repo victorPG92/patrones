@@ -29,6 +29,8 @@ public class RellenadorFromJSON implements IRellenador<JSONObject>
 		String fieldName= field.getName();
 		
 		
+		System.out.println("Obteniendo "+ field + " de " + json);
+		
 		//System.out.println("//type "+ type +" en "+  field);
 		if( String.class.equals(type))
 			return json.optString(fieldName);

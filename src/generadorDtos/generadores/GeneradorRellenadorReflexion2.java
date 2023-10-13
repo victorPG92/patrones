@@ -21,6 +21,8 @@ public class GeneradorRellenadorReflexion2 {
 	IRellenador rellenador= new Rellenador();
 	
 	
+	private boolean subnivelListas=true;
+	
 	
 	
 	public GeneradorRellenadorReflexion2()
@@ -46,7 +48,7 @@ public class GeneradorRellenadorReflexion2 {
 	{
 		
 		System.out.println("INICIO 2 ");
-
+		System.out.println("generaRellenador clase "+clase.getSimpleName()+" origen"+rellenador.getOrigen());
 		if(comprobador.esTipoPrimitivo(clase) || comprobador.esColeccion(clase))
 		{
 			System.err.println("no se rellena");
@@ -110,7 +112,7 @@ public class GeneradorRellenadorReflexion2 {
 					{
 						rellenador.setOrigen(rellenador.getOrigen(field));	
 					}
-					valorASignado=generaRellenador(field.getType(),false);
+					valorASignado=generaRellenador(field.getType());
 					
 					rellenador.setOrigen(origenOld);
 				} catch (InstantiationException | IllegalAccessException | InvocationTargetException
@@ -147,10 +149,14 @@ public class GeneradorRellenadorReflexion2 {
 		
 		
 		try {
+			
+			System.out.println("origenListado "+ origenListado);
 			for(Object origen: origenListado)
 			{
+				//if(subnivelListas)			origen= 
 				rellenador.setOrigen(origen);
-				T elemLista = generaRellenador((Class<T>)types[0]);
+				System.out.println("bucle origen"+origen);
+				T elemLista = generaRellenador((Class<T>)types[0],true);///////////////////////////////////////////////////////////
 				l.add(elemLista);
 			}
 		} catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException
@@ -185,6 +191,18 @@ public class GeneradorRellenadorReflexion2 {
 	public void setRellenador(IRellenador rellenador)
 	{
 		this.rellenador = rellenador;
+	}
+
+
+	public boolean isSubnivelListas()
+	{
+		return subnivelListas;
+	}
+
+
+	public void setSubnivelListas(boolean subnivelListas)
+	{
+		this.subnivelListas = subnivelListas;
 	}
 	
 	

@@ -60,19 +60,19 @@ public class PruebaJSONLista2Elem
 		
 		padre2.accumulate("dto", dto2);
 		
-		dto.accumulate("id", "02");
-		dto.accumulate("name", "nombre2");
-		dto.accumulate("i", 12);
-		dto.accumulate("i2", 22);
-		dto.accumulate("d", 12.0);
-		dto.accumulate("d2", 22.0);
-		dto.accumulate("f", 12f);
-		dto.accumulate("f2", 22f);
-		dto.accumulate("l", 12l);
-		dto.accumulate("L2", 22L);
-		dto.accumulate("b", true);
-		dto.accumulate("b2", true);
-		dto.accumulate("date", new Date());
+		dto2.accumulate("id", "02");
+		dto2.accumulate("name", "nombre2");
+		dto2.accumulate("i", 12);
+		dto2.accumulate("i2", 22);
+		dto2.accumulate("d", 12.0);
+		dto2.accumulate("d2", 22.0);
+		dto2.accumulate("f", 12f);
+		dto2.accumulate("f2", 22f);
+		dto2.accumulate("l", 12l);
+		dto2.accumulate("L2", 22L);
+		dto2.accumulate("b", true);
+		dto2.accumulate("b2", true);
+		dto2.accumulate("date", new Date());
 		
 		RellenadorFromJSON r= new RellenadorFromJSON(listado);
 		GeneradorRellenadorReflexion2 g= new GeneradorRellenadorReflexion2(r);
@@ -88,6 +88,12 @@ public class PruebaJSONLista2Elem
 			
 			System.out.println(listadoGenerado.getPadres().get(0));
 			System.out.println(listadoGenerado.getPadres().get(1));
+			
+			
+			Object id=listadoGenerado.getPadres().get(0).getDto().getId();
+			System.out.println(id +" "+ id.getClass());
+			String id2= (String) id;
+			System.out.println(id2);
 			
 			
 
