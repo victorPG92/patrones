@@ -7,6 +7,8 @@ import java.util.List;
 
 public class Rellenador implements IRellenador {
 
+	private int numLista=1;
+	
 	@Override
 	public Object rellenaTipoPrimitivo(Field field)
 	{
@@ -67,7 +69,11 @@ public class Rellenador implements IRellenador {
 	public List getOrigenListado(Field field)
 	{
 		List l= new ArrayList<>();
-		l.add(null);
+		for (int i = 0; i < numLista; i++)
+		{
+			l.add(null);
+		}
+		
 		return l;
 	}
 
@@ -77,4 +83,17 @@ public class Rellenador implements IRellenador {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	public int getNumLista()
+	{
+		return numLista;
+	}
+
+	public void setNumLista(int numLista)
+	{
+		this.numLista = numLista;
+	}
+	
+	
+	
 }
