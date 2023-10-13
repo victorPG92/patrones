@@ -10,6 +10,7 @@ import generadorDtos.generadores.comprobaciones.Comprobador;
 import generadorDtos.generadores.rellenadores.IRellenador;
 import generadorDtos.generadores.rellenadores.Rellenador;
 
+@Deprecated
 public class GeneradorRellenadorDTOReflexion {
 
 	Comprobador comprobador = new Comprobador();

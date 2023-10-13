@@ -1,8 +1,12 @@
 package generadorDtos.generadores.rellenadores;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class RellenadorFromJSON implements IRellenador<JSONObject>
@@ -92,6 +96,44 @@ public class RellenadorFromJSON implements IRellenador<JSONObject>
 
 		
 		return ret;
+	}
+	
+	
+	@Override
+	public List<JSONObject> getOrigenListado(Field field)
+	{
+		String fieldName= field.getName();
+		System.out.println("cogiend campo "+fieldName);
+
+		JSONArray ret = json.getJSONArray(fieldName);
+		
+		System.out.println("cogiend campo "+fieldName+" ret "+ret);
+
+		List<JSONObject> lista= new  ArrayList<JSONObject>();
+		
+		if(ret.get(0) instanceof JSONArray)
+		{
+			ret=ret.getJSONArray(0);
+		}
+		
+		for (int i = 0; i < ret.length(); i++)
+		{
+			System.out.println(ret.get(0));
+			System.out.println(ret.get(0).getClass());
+			
+			
+			lista.add(ret.getJSONObject(0));
+		}
+		
+		
+		
+		return lista;
+	}
+
+	@Override
+	public JSONObject getOrigen()
+	{
+		return  getJson();
 	}
 	
 	

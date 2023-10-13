@@ -88,7 +88,11 @@ public class GeneradorRellenadorReflexion2 {
 			else if(comprobador.esColeccion(field))
 			{
 				System.out.println("es una coleccion "+ field.getType());
-				valorASignado= rellenaLista(field);
+				
+				Object origenOld= rellenador.getOrigen();
+				List origenListado = rellenador.getOrigenListado(field);
+				valorASignado= rellenaLista(field,origenListado);
+				rellenador.setOrigen(origenOld);
 			}
 			else
 			{
@@ -122,7 +126,7 @@ public class GeneradorRellenadorReflexion2 {
 	}
 	
 	
-	public <T> List<T> rellenaLista(Field field)
+	public <T> List<T> rellenaLista(Field field, List<Object> origenListado)
 	{
 		List<T> l = new ArrayList<>();
 		
@@ -132,8 +136,12 @@ public class GeneradorRellenadorReflexion2 {
 		
 		
 		try {
-			T elemLista = generaRellenador((Class<T>)types[0]);
-			l.add(elemLista);
+			for(Object origen: origenListado)
+			{
+				rellenador.setOrigen(origen);
+				T elemLista = generaRellenador((Class<T>)types[0]);
+				l.add(elemLista);
+			}
 		} catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException
 				| SecurityException e) {
 			// TODO Auto-generated catch block

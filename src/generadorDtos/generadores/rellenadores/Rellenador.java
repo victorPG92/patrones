@@ -1,7 +1,9 @@
 package generadorDtos.generadores.rellenadores;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Rellenador implements IRellenador {
 
@@ -56,6 +58,21 @@ public class Rellenador implements IRellenador {
 
 	@Override
 	public Object getOrigen(Field field)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List getOrigenListado(Field field)
+	{
+		List l= new ArrayList<>();
+		l.add(null);
+		return l;
+	}
+
+	@Override
+	public Object getOrigen()
 	{
 		// TODO Auto-generated method stub
 		return null;
