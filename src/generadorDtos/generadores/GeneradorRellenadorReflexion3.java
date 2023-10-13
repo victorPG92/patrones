@@ -15,22 +15,23 @@ import generadorDtos.generadores.rellenadores.IRellenador;
 import generadorDtos.generadores.rellenadores.Rellenador;
 
 
-public class GeneradorRellenadorReflexion2 {
+public class GeneradorRellenadorReflexion3 {
 
+	/**
 	Comprobador comprobador = new Comprobador();
 	IRellenador rellenador= new Rellenador();
 	
 	
 	
 	
-	public GeneradorRellenadorReflexion2()
+	public GeneradorRellenadorReflexion3()
 	{
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 
-	public GeneradorRellenadorReflexion2(IRellenador rellenador)
+	public GeneradorRellenadorReflexion3(IRellenador rellenador)
 	{
 		super();
 		this.rellenador = rellenador;
@@ -40,19 +41,33 @@ public class GeneradorRellenadorReflexion2 {
 	public <T> T generaRellenador(Class<T> clase) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, SecurityException
 	{
 		
-		System.out.println("INICIO 2 ");
-
-		if(comprobador.esTipoPrimitivo(clase) || comprobador.esColeccion(clase))
+		
+		if(comprobador.esTipoPrimitivo(clase))
 		{
-			System.err.println("no se rellena");
-			return null;
+			System.out.println("field es primitivo "+ clase);
+			valorASignado= rellenador.rellenaTipoPrimitivo(clase);
+			
+			
+		}
+		else if(comprobador.esColeccion(clase))
+		{
+			valorASignado= rellenaLista(clase);
+		}
+		else
+		{
+			System.err.println(clase);
+			//System.exit(-1);
+			try {
+				valorASignado=generaRellenador(clase);
+			} catch (InstantiationException | IllegalAccessException | InvocationTargetException
+					| NoSuchMethodException | SecurityException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
-		if(!comprobador.tieneConstructorPorDefecto(clase))
-		{
-			System.err.println("NO Se puede instanciar ");
-			return null;
-		}
+		
+		
 		
 		T obj = clase.newInstance();
 		
@@ -72,36 +87,7 @@ public class GeneradorRellenadorReflexion2 {
             field.setAccessible(true);
 
             Object valorASignado=null;
-			if(comprobador.esTipoPrimitivo(field))
-			{
-				System.out.println("field es primitivo "+ field.getType());
-				valorASignado= rellenador.rellenaTipoPrimitivo(field);
-				/*String nombreSetter= "set"+Util.capitalize(field.getName());
-				
-				System.out.println("field es primitivo nombreSetter"+ nombreSetter);
-				System.out.println("field es primitivo valorASignado"+ valorASignado);
-
-				obj.getClass().getDeclaredMethod(nombreSetter, field.getType()).invoke(obj,valorASignado );
-				*/
-				
-			}
-			else if(comprobador.esColeccion(field))
-			{
-				System.out.println("es una coleccion "+ field.getType());
-				valorASignado= rellenaLista(field);
-			}
-			else
-			{
-				System.err.println("No es ni tipo primitivo ni coleccion"+field.getType());
-				//System.exit(-1);
-				try {
-					valorASignado=generaRellenador(field.getType());
-				} catch (InstantiationException | IllegalAccessException | InvocationTargetException
-						| NoSuchMethodException | SecurityException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
+		
 			
 			 try {
 				field.set(obj, valorASignado);
@@ -167,7 +153,7 @@ public class GeneradorRellenadorReflexion2 {
 	}
 	
 	
-	
+	*/
 	
 
 }
