@@ -141,7 +141,15 @@ public class GeneradorRellenadorReflexion2 {
 	
 	public <T> List<T> rellenaLista(Field field, List<Object> origenListado)
 	{
-		List<T> l = new ArrayList<>();
+		
+		List<T> l;
+		Class<?> tipoLista = field.getType();
+		if(tipoLista.equals(List.class))
+		{
+			l =  new ArrayList<>();
+		}
+		l =  new ArrayList<>();
+		
 		
 		Type genericType = field.getGenericType();
 		ParameterizedType parameterizedType = (ParameterizedType) genericType;
